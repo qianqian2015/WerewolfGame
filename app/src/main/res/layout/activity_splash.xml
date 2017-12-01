@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bg"
+    tools:context="com.werewolfgame.werewolfgame.Activity.Activity.SplashActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/mianshafaguan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/home_text1"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#0c2947"
+        android:id="@+id/text1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/home_text2"
+        android:layout_above="@+id/text3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="70dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:textColor="#387bb8"
+        android:id="@+id/text2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/home_text3"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:textColor="#387bb8"
+        android:id="@+id/text3"
+        android:layout_above="@+id/bt_start"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/bt_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_start"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/wz_jinruyouxi"
+        android:background="@drawable/yellow_bg_selector"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"
+        />
+
+</RelativeLayout>

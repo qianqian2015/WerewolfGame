@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bg"
+    android:gravity="center_horizontal"
+    tools:context="com.werewolfgame.werewolfgame.Activity.Activity.WerewolfActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/operate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/werewolf_sharen"
+            android:textColor="@color/app_text_new_black"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/werewolf_xuanzehaoma"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="28sp"/>
+
+            <include
+                layout="@layout/gridview_layout"
+                />
+
+    </LinearLayout>
+    <include layout="@layout/include_countdown"/>
+</LinearLayout>

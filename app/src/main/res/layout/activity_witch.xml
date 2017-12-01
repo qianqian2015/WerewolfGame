@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.werewolfgame.werewolfgame.Activity.Activity.WitchActivity"
+    android:background="@mipmap/home_bg">
+
+    <LinearLayout
+        android:id="@+id/operate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/witch_nvwoxuanze"
+            android:textSize="@dimen/text_title_size"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/app_text_new_black"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mid_text_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/help_layout">
+
+            <ImageButton
+                android:id="@+id/bt_help_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_bg_selector"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="150dp"
+                android:src="@mipmap/wz_jiu"/>
+            <ImageButton
+                android:id="@+id/bt_help_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_bg_selector1"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/wz_bujiu"
+                android:layout_marginTop="50dp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/poison_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/bt_kill_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/yellow_bg_selector"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="150dp"
+                android:src="@mipmap/wz_du"/>
+
+            <ImageButton
+                android:id="@+id/bt_kill_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_bg_selector1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:src="@mipmap/wz_budu"/>
+
+        </LinearLayout>
+        <include
+            layout="@layout/gridview_layout"/>
+    </LinearLayout>
+
+
+    <include layout="@layout/include_countdown"/>
+</LinearLayout>

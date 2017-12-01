@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.werewolfgame.werewolfgame">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme.Base"
+        android:supportsRtl="true">
+        <activity
+            android:name=".Activity.Activity.MainActivity"
+            android:screenOrientation="portrait"
+           ></activity>
+        <activity
+            android:name=".Activity.Activity.WerewolfActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".Activity.Activity.ChooseRoleActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity
+            android:name=".Activity.Activity.ChooseRoleResultActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Activity.Activity.WitchActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity
+            android:name=".Activity.Activity.SeerActivity"
+            android:screenOrientation="portrait"
+           />
+        <activity
+            android:name=".Activity.Activity.ResultActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Activity.Activity.SplashActivity"
+
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.intent.action.werewwolfgame"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.Activity.AssignRoleActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+    </application>
+
+</manifest>

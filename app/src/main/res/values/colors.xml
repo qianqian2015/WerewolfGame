@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="driverLine">#6B6B6B</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="dialog_bg_color">#f1f1f1</color>
+    <color name="app_text_blue">#157EFA</color>
+    <color name="textarea_divider">#e0e0e0</color>
+    <color name="app_text_new_black">#000000</color>
+    <color name="title_bar_color_dark">#f7f7f7</color>
+    <color name="btn_enable_true_color">#157efb</color>
+    <color name="app_text_price_secondary_new_ui">#98989f</color>
+    <color name="pre_red_coclor">#e9b4d2</color>
+    <color name="darkRed">#b80368</color>
+
+    <color name="green">#46c338</color>
+
+    <color name="yellow">#DAA520</color>
+
+    <color name="dialog_bg">#80000000</color>
+    <color name="red">#B22222</color>
+</resources>

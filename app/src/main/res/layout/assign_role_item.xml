@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    tools:context="com.werewolfgame.werewolfgame.Activity.Activity.RoleChooseActivity">
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textSize="14dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/textview_bg"/>
+
+    <TextView
+        android:id="@+id/img_has_choosed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/has_choosed"
+        android:layout_toRightOf="@+id/tv_num"
+        android:layout_marginLeft="20dp"
+        android:layout_alignBottom="@id/tv_num"
+        android:text="@string/has_looked"
+        android:textSize="@dimen/mid_text_size"
+        android:drawablePadding="10dp"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/bt_look_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bt_selector"
+        android:layout_margin="20dp"
+        android:layout_below="@id/tv_num"
+        android:textSize="@dimen/mid_text_size"
+        android:text="@string/look_role"/>
+
+
+
+
+</RelativeLayout>

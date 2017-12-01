@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">狼人杀法官</string>
+
+    <string name="btn_start">进入游戏</string>
+    <string name="home_text1">手机当法官，组局不缺人！</string>
+    <string name="home_text2">我是预言家，昨晚查杀3号</string>
+    <string name="home_text3">我最鄙视悍跳了...</string>
+    <string name="role_num_introduction" formatted="false">%d 狼人，%d 村民，1预言家\n1女巫，1猎人</string>
+    <string name="role_players" >%d 人局</string>
+
+    <string name="set_player_num_text">设置游戏人数</string>
+    <string name="rolechoose_page_label">选择身份页面</string>
+    <string name="role_choose">请选择自己的角色！注意只能选一次！</string>
+    <string name="confirm_again">请重新选择！</string>
+    <string name="role_comfirm" formatted="false">%d 号玩家身份是 %s,确认选择？></string>
+
+    <string name="role_confirm_success">身份确定成功，是否进入下一步？</string>
+
+    <string name="check_allrole_identity">是否查看所有玩家身份？</string>
+
+    <string name="mode_wupai">没有手牌</string>
+    <string name="mode_youpai">我有手牌</string>
+
+    <string name="mode_guard">加守卫</string>
+    <string name="mode_no_guard">不加守卫</string>
+
+    <string name="cancel">取消</string>
+    <string name="button_comfirm">确定</string>
+
+    <string name="choose_role_page_label">角色选择页面</string>
+    <!-- 分配身份页面  -->
+
+    <!-- 身份验证页面start-->
+    <string name="querenwanbi">身份确认完毕\n即将进入黑夜..</string>
+    <string name="biyan">所有玩家闭眼</string>
+    <string name="langrencaozuo">请狼人操作</string>
+
+
+
+    <string name="youwu">角色选择有误</string>
+    <string name="chongxinxuanze">请重新确认身份</string>
+
+
+    <!-- 身份验证页面end-->
+
+    <string name="look_role">查 看 身 份</string>
+    <string name="has_looked">已查看身份</string>
+    <string name="assign_title">请查看自己的身份，注意每个人只能查看一次！</string>
+    <string name="choose_role_text1">%d号玩家你的身份是？</string>
+    <string name="choose_role_text2">各玩家根据自己所拿手牌，对号输入身份</string>
+    <string name="dialog_role_confirm">你的身份是%s吗？</string>
+
+    <!--预言家操作界面-->
+    <string name="seer_page_label">预言家操作页面</string>
+    <string name="seer_page_title">预言家 选择要验的玩家</string>
+    <string name="seer_comfirm">确认验证 %d号 玩家？</string>
+    <string name="seer_page_result" formatted = "false"> %d号是 %s </string>
+
+    <!--狼人操作界面-->
+
+    <string name="werewolf_sharen">狼人请杀人</string>
+    <string name="werewolf_xuanzehaoma">选择要杀的人的号码</string>
+    <string name="werewolf_page_label">狼人操作页面</string>
+    <string name="werewolf_page_title">狼人选择要杀的玩家</string>
+    <string name="kill_comfirm">确认选择杀 %d号 玩家？</string>
+    <string name="kill_nobody">不杀人</string>
+
+    <!--女巫操作界面-->
+    <string name="witch_page_label">女巫操作页面</string>
+    <string name="witch_nvwoxuanze">女巫请选择</string>
+    <string name="witch_nvwoduren">女巫请毒人</string>
+    <string name="help_yes">救</string>
+    <string name="help_no">不 救</string>
+    <string name="kill_yes">毒</string>
+    <string name="kill_no">不 毒</string>
+
+    <string name="help_tile"><![CDATA[<font color=\'#FF4081\'>%1$d号</font><font color=\'#000000\'>玩家死了，救不救？</font>]]></string>
+    <string name="kill_title">你要毒人吗？</string>
+    <string name="kill_who">选择撒毒的玩家号码</string>
+    <string name="nobody_kill">昨晚是个平安夜</string>
+    <string name="witch_kill_comfirm">确认毒死%d号玩家？</string>
+
+
+
+    <string name="seer_titel_text">预言家请验人</string>
+
+    <!--结果界面-->
+    <string name="result_page_label">结果页面</string>
+    <string name="result">%d号玩家死了</string>
+    <string name="result_two" formatted="false"> %d号 和 %d号 玩家死了</string>
+
+    <string name="start_game">start game</string>
+    <string name="human_num">human numbers</string>
+    <string name="werewolf">狼人</string>
+    <string name="witch">女巫</string>
+    <string name="seer">预言家</string>
+    <string name="villager">村民</string>
+    <string name="hunter">猎人</string>
+    <string name="defender">守卫</string>
+
+
+    <string name="kill_nobody_text">确认不杀人?</string>
+    <string name="action_ok_text">操作成功</string>
+    <string name="qingbiyan">请闭眼</string>
+    <string name="good_man">好人</string>
+
+
+</resources>
