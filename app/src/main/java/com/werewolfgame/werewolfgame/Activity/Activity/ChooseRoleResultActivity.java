@@ -80,9 +80,9 @@ public class ChooseRoleResultActivity extends AppCompatActivity implements View.
         finish();
     }
     private void gotoChooseRoleAct(){
-        Intent intent = new Intent();
-        intent.setClass(this,ChooseRoleActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent();
+//        intent.setClass(this,ChooseRoleActivity.class);
+//        startActivity(intent);
         finish();
     }
 }

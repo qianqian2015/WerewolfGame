@@ -151,6 +151,7 @@ public class ChooseRoleActivity extends AppCompatActivity implements IdentifyInt
         intent.setClass(this,ChooseRoleResultActivity.class);
         intent.putExtra("isVerifySuccess",isVerrifySuccess);
         startActivity(intent);
+        finish();
     }
 
 

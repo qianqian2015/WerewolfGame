@@ -55,6 +55,7 @@
     <string name="seer_page_title">预言家 选择要验的玩家</string>
     <string name="seer_comfirm">确认验证 %d号 玩家？</string>
     <string name="seer_page_result" formatted = "false"> %d号是 %s </string>
+    <string name="seer_page_result_title" formatted="false"> %d号是 </string>
 
     <!--狼人操作界面-->
 

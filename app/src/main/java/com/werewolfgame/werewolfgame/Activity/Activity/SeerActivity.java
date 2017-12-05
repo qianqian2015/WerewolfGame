@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.werewolfgame.werewolfgame.Activity.Adapter.KillChooseAdapter;
@@ -73,7 +74,7 @@ public class SeerActivity extends BaseActivity implements KillInterface {
             Log.i(TAG,"type = "+type);
             if(type>= 0 && type<Utils.MAX_ROLE_TYPE){
                 int positive = Utils.rolePositive[type];
-                showResultDialog(positive);
+                showResultDialog(positive, num);
                 //5秒之后调到关闭页面
                 killChooseAdapter.setButtonDisable();
                 mHandler.sendEmptyMessageDelayed(MSG_JUMPTONEXTPAGE,5000);
@@ -87,10 +88,12 @@ public class SeerActivity extends BaseActivity implements KillInterface {
 
     }
 
-    private void showResultDialog(int type){
+    private void showResultDialog(int type, int position) {
 
         View dialogView =  LayoutInflater.from(this).inflate(R.layout.seer_dialog, null);
         ImageView imageView = (ImageView)dialogView.findViewById(R.id.img_result);
+        TextView tvTitle = (TextView) dialogView.findViewById(R.id.tv_result_title);
+        tvTitle.setText(String.format(getString(R.string.seer_page_result_title), position + 1));
         if(type == -1){
             imageView.setImageResource(R.mipmap.card_bad);
         }else{

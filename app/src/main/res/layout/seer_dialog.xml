@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_margin="10dip"
     android:background="@color/dialog_bg"
     android:gravity="center">
     <ImageView
         android:id="@+id/img_result"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/card_bad" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_result_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
