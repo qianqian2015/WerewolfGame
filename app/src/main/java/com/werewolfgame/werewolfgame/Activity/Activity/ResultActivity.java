@@ -3,12 +3,12 @@ package com.werewolfgame.werewolfgame.Activity.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.text.Html;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.werewolfgame.werewolfgame.Activity.DialogListener;
-import com.werewolfgame.werewolfgame.Activity.View.DialogViewer;
-import com.werewolfgame.werewolfgame.Activity.model.HeroInfo;
 import com.werewolfgame.werewolfgame.Activity.utils.SoundUtils;
 import com.werewolfgame.werewolfgame.Activity.utils.Utils;
 import com.werewolfgame.werewolfgame.R;
@@ -17,6 +17,8 @@ public class ResultActivity extends WakeLockActivity {
     private int helpNum,killNum;
     private TextView tvResult;
     private TextView tvAllRoleIdentity;
+    private TextView tvResultTitle, tvResultTitle2, tvResultTitle3;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,30 +35,25 @@ public class ResultActivity extends WakeLockActivity {
     }
 
     private void initView(){
+        tvResultTitle = (TextView) findViewById(R.id.tv_result_title);
+        tvResultTitle2 = (TextView) findViewById(R.id.tv_result_title2);
+        tvResultTitle3 = (TextView) findViewById(R.id.tv_result_title3);
+
+        tvResultTitle.setText(Html.fromHtml(getString(R.string.result_title1)));
+        tvResultTitle2.setText(Html.fromHtml(getString(R.string.result_title2)));
+
         tvResult = (TextView)findViewById(R.id.tv_result);
         tvAllRoleIdentity = (TextView)findViewById(R.id.tv_allrole);
-        findViewById(R.id.role_check).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DialogViewer dialogViewer = new DialogViewer(ResultActivity.this, getString(R.string.check_allrole_identity), new DialogListener() {
-                    @Override
-                    public void onDialogClick(Dialog dialog, boolean isLeftButonClick, boolean isRightButtonClick) {
-                        if(isRightButtonClick){
-                            //查看所有玩家身份
-                            tvAllRoleIdentity.setVisibility(View.VISIBLE);
-                            tvAllRoleIdentity.setText(getAllRoleIdentity());
-                        }
-                    }
-                });
-                dialogViewer.show();
-            }
-        });
     }
     public void ResultOnClick(View v){
         tvResult.setVisibility(View.VISIBLE);
+        tvResultTitle3.setVisibility(View.VISIBLE);
+        tvResultTitle2.setVisibility(View.GONE);
+        tvResultTitle.setText(getString(R.string.result_text2));
+        tvResultTitle.setTextColor(getResources().getColor(R.color.app_text_new_black));
         if(killNum == -1){
             if(helpNum == -1){
-                tvResult.setText("昨晚是个平安夜！");
+                tvResult.setText("是个平安夜！");
             }else {
                 tvResult.setText(String.format(getString(R.string.result),helpNum+1));
             }
@@ -67,7 +64,18 @@ public class ResultActivity extends WakeLockActivity {
                 tvResult.setText(String.format(getString(R.string.result),killNum+1));
             }
         }
+        findViewById(R.id.imageview_retry).setVisibility(View.VISIBLE);
+        v.setVisibility(View.GONE);
+    }
 
+    public void OnClickRetry(View v) {
+        //重新开始游戏
+
+    }
+
+    public void OnClickAllIdentity(View v) {
+        //查看所有玩家身份
+        showResultDialog();
 
     }
     protected void playMusic(int id) {
@@ -77,18 +85,37 @@ public class ResultActivity extends WakeLockActivity {
     @NonNull
     private String getAllRoleIdentity(){
         StringBuffer roleIdentityStr = new StringBuffer();
-        for(int i =0; i< Utils.mPlayerNum;i++){
-            roleIdentityStr.append(String.format("%d号玩家,",i+1));
-            HeroInfo heroInfo = HeroInfo.find(HeroInfo.class,Utils.roleArrayList.get(i)+1);
-            if(heroInfo != null){
-                roleIdentityStr.append(" 身份："+ heroInfo.getRoleName());
-                roleIdentityStr.append("\n");
+        for (int i = 0; i < Utils.roleArrayList.size(); i++) {
+            roleIdentityStr.append(String.format("%d号:", i + 1));
+//            HeroInfo heroInfo = HeroInfo.find(HeroInfo.class,Utils.roleArrayList.get(i)+1);
+            String playName = Utils.roleName[Utils.roleArrayList.get(i)];
+            if (!TextUtils.isEmpty(playName)) {
+                roleIdentityStr.append(playName);
+                if (i % 2 != 0) {
+                    roleIdentityStr.append("\n");
+                }
             }
 
         }
-
-
-
         return roleIdentityStr.toString();
+    }
+
+    private void showResultDialog() {
+
+        View dialogView = LayoutInflater.from(this).inflate(R.layout.check_identy_dialog, null);
+
+        TextView tvTitle = (TextView) dialogView.findViewById(R.id.tv_result_title);
+        tvTitle.setText(getAllRoleIdentity());
+
+        if (dialog == null) {
+            dialog = new Dialog(ResultActivity.this);
+
+        }
+        if (dialog.isShowing()) {
+            dialog.dismiss();
+        }
+        dialog.getWindow().setContentView(dialogView);
+        dialog.show();
+
     }
 }

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -36,8 +37,8 @@ public class DialogViewer {
     private TextView contentView;
     private ImageView contentImg;
     //private ImageView titleImage;
-    private Button leftButtonView;
-    private Button rightButtonView;
+    private ImageButton leftButtonView;
+    private ImageButton rightButtonView;
     private Button submitButtonView;
     private View oneView;
     private View multiView;
@@ -379,9 +380,9 @@ public class DialogViewer {
 
     private void initButton() {
         multiView = dialog.findViewById(R.id.multi_button);
-        leftButtonView = (Button) dialog.findViewById(R.id.left_button);
+        leftButtonView = (ImageButton) dialog.findViewById(R.id.left_button);
         if (leftButtonText != null) {
-            leftButtonView.setText(leftButtonText);
+//            leftButtonView.setText(leftButtonText);
 
 //            if(isLeftActive){
 //                leftButtonView.setTextColor(context.getResources().getColor(R.color.app_text_red));
@@ -400,9 +401,9 @@ public class DialogViewer {
             });
         }
 
-        rightButtonView = (Button) dialog.findViewById(R.id.right_button);
+        rightButtonView = (ImageButton) dialog.findViewById(R.id.right_button);
         if (rightButtonText != null) {
-            rightButtonView.setText(rightButtonText);
+//            rightButtonView.setText(rightButtonText);
 //            if(isRightActive){
 //                rightButtonView.setTextColor(context.getResources().getColor(R.color.app_text_red));
 //            }else{
@@ -463,7 +464,7 @@ public class DialogViewer {
      * @param leftButtonText
      */
     public void setLeftButtonText(String leftButtonText) {
-        leftButtonView.setText(leftButtonText);
+//        leftButtonView.setText(leftButtonText);
     }
 
 

@@ -54,7 +54,7 @@ public class ChooseRoleActivity extends AppCompatActivity implements IdentifyInt
         setContentView(R.layout.choose_role_layout);
         ButterKnife.bind(this);
         init();
-        initView();
+//        initView();
 
     }
 

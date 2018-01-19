@@ -22,4 +22,5 @@
 
     <color name="dialog_bg">#80000000</color>
     <color name="red">#B22222</color>
+    <color name="light_blue">#387bb8</color>
 </resources>

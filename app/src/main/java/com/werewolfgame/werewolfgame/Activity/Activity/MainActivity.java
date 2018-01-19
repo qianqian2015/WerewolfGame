@@ -125,6 +125,13 @@ public class MainActivity extends WakeLockActivity {
                                 imgModeSwitch.setImageLevel(0);
                                 tvModeSwitch.setText(getString(R.string.mode_youpai));
                                 Log.i(TAG,"imgModeSwitch，固定身份");
+
+                                //test
+
+//                                Intent intent = new Intent(MainActivity.this,ResultActivity.class);
+//                                intent.putExtra("helpNum",1);
+//                                intent.putExtra("killNum",2);
+//                                startActivity(intent);
                                 break;
                         }
                         break;

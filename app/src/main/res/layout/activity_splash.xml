@@ -37,7 +37,7 @@
         android:layout_marginLeft="70dp"
         android:textStyle="bold"
         android:layout_marginBottom="5dp"
-        android:textColor="#387bb8"
+        android:textColor="@color/light_blue"
         android:id="@+id/text2" />
 
     <TextView
@@ -47,7 +47,7 @@
         android:text="@string/home_text3"
         android:textStyle="bold"
         android:layout_marginBottom="24dp"
-        android:textColor="#387bb8"
+        android:textColor="@color/light_blue"
         android:id="@+id/text3"
         android:layout_above="@+id/bt_start"
         android:layout_centerHorizontal="true" />
@@ -56,7 +56,6 @@
         android:id="@+id/bt_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_start"
         android:layout_alignParentBottom="true"
         android:src="@mipmap/wz_jinruyouxi"
         android:background="@drawable/yellow_bg_selector"

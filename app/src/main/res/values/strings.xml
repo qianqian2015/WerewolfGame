@@ -105,5 +105,10 @@
     <string name="qingbiyan">请闭眼</string>
     <string name="good_man">好人</string>
 
+    <string name="result_title1"><![CDATA[<font color=\'#DAA520\'>所有玩家操作完毕</font>]]></string>
+    <string name="result_title2"><![CDATA[<font color=\'#000000\'>天黑已过去，天亮了</font>]]></string>
+    <string name="result_text2">昨天晚上</string>
+    <string name="result_title3">接下来，让死去的玩家当法官吧</string>
+
 
 </resources>
