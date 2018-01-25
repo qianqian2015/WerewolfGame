@@ -1,6 +1,7 @@
 package com.werewolfgame.werewolfgame.Activity.Activity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.Html;
@@ -70,6 +71,9 @@ public class ResultActivity extends WakeLockActivity {
 
     public void OnClickRetry(View v) {
         //重新开始游戏
+        Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
 
     }
 
