@@ -6,4 +6,6 @@ package com.werewolfgame.werewolfgame.Activity;
 public interface IdentifyInterface {
      void identifyRole(int[] a);
      void clickedRoleItem(int position);
+
+     void showChooseDialog(int posistion);
 }

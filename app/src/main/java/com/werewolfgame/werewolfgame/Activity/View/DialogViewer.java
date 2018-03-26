@@ -276,9 +276,9 @@ public class DialogViewer {
 
     private void initView() {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View dialogView = (LinearLayout) inflater.inflate(R.layout.dialog_layout, null);
+        View dialogView = inflater.inflate(R.layout.dialog_layout, null);
 
-        dialog = new Dialog(context, R.style.dialog);
+        dialog = new Dialog(context);
         dialog.getWindow().setContentView(dialogView);
 
         //对title不为空，content为空的情况做兼容。标题与内容显示方式不一样

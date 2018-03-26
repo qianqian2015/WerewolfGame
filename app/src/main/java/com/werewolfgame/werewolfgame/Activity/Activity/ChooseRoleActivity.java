@@ -1,5 +1,6 @@
 package com.werewolfgame.werewolfgame.Activity.Activity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +12,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.werewolfgame.werewolfgame.Activity.Adapter.ChooseRoleAdapter;
+import com.werewolfgame.werewolfgame.Activity.DialogListener;
 import com.werewolfgame.werewolfgame.Activity.IdentifyInterface;
+import com.werewolfgame.werewolfgame.Activity.View.DialogViewer;
 import com.werewolfgame.werewolfgame.Activity.randomUtil;
 import com.werewolfgame.werewolfgame.Activity.utils.Utils;
 import com.werewolfgame.werewolfgame.R;
@@ -144,6 +147,20 @@ public class ChooseRoleActivity extends AppCompatActivity implements IdentifyInt
             tv_role_choose_hint.setText(String.format(getString(R.string.choose_role_text1), index));
 
         }
+    }
+
+    @Override
+    public void showChooseDialog(final int position) {
+        String content = String.format(getString(R.string.dialog_role_confirm), Utils.roleName[position]);
+        DialogViewer dialogViewer = new DialogViewer(this, content, new DialogListener() {
+            @Override
+            public void onDialogClick(Dialog dialog, boolean isLeftButonClick, boolean isRightButtonClick) {
+                if (isRightButtonClick) {
+                    clickedRoleItem(position);
+                }
+            }
+        });
+        dialogViewer.show();
     }
 
     private void gotoResultAct(boolean isVerrifySuccess){

@@ -1,6 +1,5 @@
 package com.werewolfgame.werewolfgame.Activity.Adapter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,10 +8,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.werewolfgame.werewolfgame.Activity.DialogListener;
 import com.werewolfgame.werewolfgame.Activity.IdentifyInterface;
 import com.werewolfgame.werewolfgame.Activity.RoleItemInterface;
-import com.werewolfgame.werewolfgame.Activity.View.DialogViewer;
 import com.werewolfgame.werewolfgame.Activity.utils.Utils;
 import com.werewolfgame.werewolfgame.R;
 
@@ -77,16 +74,9 @@ public class ChooseRoleAdapter extends BaseAdapter implements RoleItemInterface 
                final int tag = (int)view.getTag();
                 Log.i("zq","tag = "+tag);
                 if(tag >=0 && tag <Utils.roleName.length){
-                    String content = String.format(context.getString(R.string.dialog_role_confirm),Utils.roleName[tag]);
-                     DialogViewer dialogViewer = new DialogViewer(context, content, new DialogListener() {
-                        @Override
-                        public void onDialogClick(Dialog dialog, boolean isLeftButonClick, boolean isRightButtonClick) {
-                            if(isRightButtonClick){
-                                identifyInterface.clickedRoleItem(tag);
-                            }
-                        }
-                    });
-                    dialogViewer.show();
+//                    String content = String.format(context.getString(R.string.dialog_role_confirm),Utils.roleName[tag]);
+
+                    identifyInterface.showChooseDialog(tag);
                 }
 
             }

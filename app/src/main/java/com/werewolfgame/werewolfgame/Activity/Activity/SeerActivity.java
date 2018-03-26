@@ -100,7 +100,7 @@ public class SeerActivity extends BaseActivity implements KillInterface {
             imageView.setImageResource(R.mipmap.card_good);
         }
         if(dialog == null){
-            dialog = new Dialog(SeerActivity.this);
+            dialog = new Dialog(this);
 
         }
         if(dialog.isShowing()){
